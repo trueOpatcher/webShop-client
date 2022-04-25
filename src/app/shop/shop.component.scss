@@ -37,9 +37,12 @@
 }
 
 .desc {
-    color: black;
+    padding: 0 5px;
+    white-space: initial;
+    color: red;
     margin-bottom: 7px;
     font-size: 16px;
+    word-wrap: break-word;
 }
 
 .name {
