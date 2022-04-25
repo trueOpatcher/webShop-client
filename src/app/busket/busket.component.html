@@ -1,0 +1,74 @@
+<div class="container">
+
+    <div class="panel">
+        <div class="content">
+
+            <input type="radio" id='c' name="items">
+
+            <label 
+                class="item category" 
+                for='c'
+                (click)="onShowAll()">All</label>
+
+            <div *ngFor="let item of items; let i = index">
+
+                <input type="radio" id={{i}} name="items">
+                <label 
+                class="item" 
+                for={{i}}
+                (click)="onShowItem(i)">{{item.name}}</label>
+
+            </div>
+
+            
+            <div class="bottom">
+                <div class="price">
+                    Total: ${{priceForAll}}
+                </div>
+                <div class="buy">
+                    <button class="btn light">Buy</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="items">
+
+        
+            <div class="card" *ngFor="let item of currentItems; let i = index">
+                <div class="inner-card">
+                    <div class="front-card">
+        
+                        <div>
+                            <img [src]="item.imageUrl" alt="">
+                        </div>
+        
+                        <div class="name">
+                            {{item.name}}
+                        </div>
+        
+                        <div class="price">
+                            ${{item.price}}
+                        </div>
+        
+                    </div>
+        
+                    <div class="back-card">
+                        <div class="desc">
+                            {{item.desc}}
+                        </div>
+
+                        <div class="remove">
+                            <button class="btn btn-danger" (click)="onRemoveItem(i)">Remove</button>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+
+    </div>
+
+
+</div>

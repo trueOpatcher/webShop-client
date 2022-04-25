@@ -1,0 +1,94 @@
+@import 'src/scss/variables';
+@import 'src/scss/card';
+
+.content {
+    
+    background-color: #9e1c0e;
+    // flex-grow: 1;
+    height: calc(100% - 30px - $navbar-height);
+    // height: auto;
+    display: flex;
+    margin: 0 50px;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    justify-content: center;
+    overflow-y: auto;
+    
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    // overflow-y: auto;
+    background-color: white;
+    max-width: none;
+    height: 100%;
+    display: relative;
+    
+    
+    min-width: 300px;
+}
+
+.front-bottom {
+    font-size: 14px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+.desc {
+    color: black;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.name {
+    color: black;
+}
+
+.price {
+    color: black;
+}
+
+.head {
+    display: absolute;
+    height: 25px;
+    width: 100%;
+}
+
+.empty-cat {
+    color: red;
+    font-size: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty-items {
+    
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cat-name {
+    font-size: 20px;
+    background-color: #9e1c0e;
+    color: white;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    margin: 0 50px 0 50px;
+}
+
+
+
+
+
+

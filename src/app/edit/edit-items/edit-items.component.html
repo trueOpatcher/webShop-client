@@ -1,0 +1,57 @@
+
+<div class="cat-name" *ngIf="currentCategory">{{currentCategory.subName ? currentCategory.subName: currentCategory.catName}}</div>
+
+<div class="content">
+    
+    <div class="card" *ngFor="let item of currentCategory.items">
+        <div class="inner-card">
+            <div class="front-card">
+
+                <div>
+                    <img [src]="item.imageUrl" alt="">
+                </div>
+                <div class="front-info">
+                    <div>
+                        {{item.name}}
+                    </div>
+    
+                    <div>
+                        ${{item.price}}
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="back-card">
+                <div class="desc">
+                    {{item.desc}}
+                </div>
+
+                <div>
+                    <button (click)="onClickDelete(item.name)" class="btn btn-danger">Remove</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card" *ngIf="currentCategory">
+    
+        <div class="inner-card">
+            <div class="add-card">
+                <mat-icon class="add">add</mat-icon>
+            </div>
+
+            <div class="back-card">
+                <mat-icon class="add" (click)="onClickAddCard()">add</mat-icon>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

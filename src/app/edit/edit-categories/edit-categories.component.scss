@@ -1,0 +1,114 @@
+
+
+
+.tree { 
+    margin: 1em; 
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.item {
+    position: relative;
+    margin-bottom: 3px;
+    font-size: 18px;
+    padding: 5px;
+    min-width: 120px;
+    max-width: 120px;
+    // border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.subCategory {
+    position: relative;
+    justify-content: space-around;
+    display: flex;
+    margin-left: auto;
+    
+    background-color: white;
+    
+    .delete-box {
+        position: absolute;
+        left: 0;
+    }
+    
+}
+
+
+.category {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+
+    .delete-box {
+        position: absolute;
+        left: 0;
+    }
+
+    background-color: blue;
+    color: white;
+    // background-color: white;
+
+}
+
+.add_subCategory {
+    text-align: center;
+    background: grey;
+    margin-bottom: 15px;
+
+    .mat-icon {
+        vertical-align: middle;
+    }
+    &:hover {
+        background-color: white;
+    }
+}
+
+.add_category {
+    margin-right: auto;
+    background: grey;
+    text-align: center;
+
+    .mat-icon {
+        vertical-align: middle;
+    }
+    &:hover {
+        background-color: #ca2c1b;
+    }
+}
+
+
+.matDelete {
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    
+}
+
+
+.fileInput {
+    height: 28px;
+    width: 100px;
+    margin: auto;
+    text-overflow: ellipsis;
+}
+
+.add-button {
+}
+
+.hidden_input {
+    display: none;
+    flex-direction: column;
+}

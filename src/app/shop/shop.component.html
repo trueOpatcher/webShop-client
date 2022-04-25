@@ -1,0 +1,50 @@
+
+
+<div class="container">
+
+    <div class="cat-name" *ngIf="category">{{category.subName ? category.subName: category.catName}}</div>
+
+    <div class="empty-cat" *ngIf="!category">
+        Select Category
+    </div>
+
+    <div class="content" *ngIf="category">
+
+        <div *ngIf="!category.items || category.items.length == 0" class="empty-items">There is no items :(</div>
+
+            <div class="card" *ngFor="let item of category.items">
+                <div class="inner-card">
+                    <div class="front-card">
+        
+                        <div>
+                            <img [src]="item.imageUrl" alt="">
+                        </div>
+        
+                        <div class="name">
+                            {{item.name}}
+                        </div>
+        
+                        <div class="price">
+                            ${{item.price}}
+                        </div>
+
+                        <div class="front-bottom">
+                            {{category.subName ? category.subName : category.catName}}
+                        </div>
+        
+                    </div>
+        
+                    <div class="back-card">
+                        <div class="desc">
+                            {{item.desc}}
+                        </div>
+                        <div>
+                            <button class="btn btn-danger" #addButton (click)="onAddToBusket(item); addButton.disabled = true">to busket</button>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+    </div>
+    
+</div>

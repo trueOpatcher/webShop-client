@@ -1,0 +1,15 @@
+@import 'src/scss/variables';
+
+
+.container {
+    background-color: #9e1c0e;
+    width: 100%;
+    height: calc(100% - $navbar-height);
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: none;
+    box-sizing: border-box;
+    
+    
+}
+

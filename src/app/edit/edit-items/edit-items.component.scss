@@ -1,0 +1,28 @@
+
+@import 'src/scss/card';
+
+.content {
+    box-sizing: content-box;
+    width: auto;
+    height: calc(100% - 30px);
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 250px;
+    overflow-y: auto;
+}
+
+
+.cat-name {
+    font-size: 20px;
+    color: #9e1c0e;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    margin: 0 50px 0 50px;
+}
+
+
+
+

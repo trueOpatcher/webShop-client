@@ -1,0 +1,73 @@
+
+
+<!-- <div class="container"> -->
+
+    <ul class="tree">
+        <li *ngFor="let category of categories; let i = index">
+
+            
+            <div class="item category">
+                 <div class="delete-box"><mat-icon class="matDelete" [matMenuTriggerFor]="menu">delete</mat-icon> </div>
+                 <div (click)="onSelectCategory(category.name, category.items)">{{category.name}}</div>
+            </div>
+            <mat-menu #menu="matMenu">
+
+                <button mat-menu-item>No</button>
+                <button mat-menu-item (click)="onDeleteCategory(category.name)">Yes</button>
+
+            </mat-menu>
+            
+            <ul *ngFor="let subCategory of category.subCategories">
+
+                <div class="item subCategory">
+                    <div class="delete-box"><mat-icon class="matDelete" [matMenuTriggerFor]="menu">delete</mat-icon> </div>
+                    <div (click)="onSelectSubCategory(category.name, subCategory.name, subCategory.items)">{{subCategory.name}}</div>
+               </div>
+
+                <mat-menu #menu="matMenu">
+
+                    <button mat-menu-item>No</button>
+                    <button mat-menu-item (click)="onDeleteSubCategory(category.name, subCategory.name)">Yes</button>
+    
+                </mat-menu>
+
+            </ul>
+
+            <ul>
+                <div class="item add_subCategory">
+                    <mat-icon 
+                    (click)="hiddenInput.style.display = 'flex'">add</mat-icon>
+                    
+                    <div class="hidden_input" #hiddenInput>
+                        <input class="fileInput" #fileSelect type="text">
+                    <button
+                     class=" add-button" 
+                     (click)="onAddSubCategory(category.name, fileSelect.value)">Add</button>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </ul>
+
+            
+            
+        </li>
+
+        <li>
+                <div class="item add_category">
+                    <mat-icon 
+                    (click)="hiddenInput.style.display = 'flex'">add</mat-icon>
+                    
+                    <div class="hidden_input" #hiddenInput>
+                        <input class="fileInput" #fileSelect type="text">
+                    <button
+                     class=" add-button" 
+                     (click)="onAddCategory(fileSelect.value)">Add</button>
+                    </div>
+                </div>
+        </li>
+       
+
+    </ul>
+<!-- </div> -->

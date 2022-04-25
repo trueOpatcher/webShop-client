@@ -1,0 +1,62 @@
+
+
+<div class="header">
+    <div class="container-fluid">
+
+        <ul>
+
+            
+
+            <li class="catLink">
+                <div class="categories"><mat-icon>auto_awesome_motion</mat-icon></div>
+
+                <div class="dropdown">
+
+                    <div class="menu" *ngFor="let category of categories">
+
+                        <div class="category menu-item" (click)="onSelectCategory(category.name, category.items)">
+
+                            {{category.name}}
+                            <mat-icon class="cat-arrow" *ngIf="category.subCategories">chevron_right</mat-icon>
+                        </div>
+
+                        <div class="sub_menu" >
+                            <div class="subCategory menu-item"
+                             *ngFor="let subCategory of category.subCategories"
+                             (click)="onSelectSubCategory(category.name, subCategory.name, subCategory.items)">
+
+                                {{subCategory.name}}
+    
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </li>
+
+            <li class="shop">
+                <a routerLink="/shop">Shop</a>
+            </li>
+
+            <li class="busket">
+                <a routerLink="/busket">Busket</a>
+                
+            </li>
+
+        </ul>
+
+
+
+        <ul class="logout">
+            <li>
+                <a style="margin-right: 10px;" routerLink="/edit">Edit</a>
+            </li>
+
+            <li (click)="onLogout()">
+                <a><mat-icon mat-icon>logout</mat-icon></a>
+            </li>
+        </ul>
+
+    </div>
+</div>

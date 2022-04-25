@@ -1,0 +1,81 @@
+@import '../../app.component.scss';
+
+.container {
+    max-width: 540px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group {
+    margin-top: 2vh;
+}
+
+
+
+li {
+    list-style-type: none;
+    a {
+        color: white;
+
+        &:hover {
+            color: #6b0aea;
+        }
+    }
+}
+
+.bottom-content {
+    display: flex;
+    margin-top: 2vh;
+    justify-content: space-between;
+    
+}
+
+.form-group {
+    margin-top: 2vh;
+}
+
+button {
+    background-color: #9e1c0e;
+    pointer-events: all;
+    border: 0;
+    padding: 5px;
+    
+    &:disabled {
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+li {
+    list-style-type: none;
+    a {
+        color: white;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.bottom-content {
+    display: flex;
+    margin-top: 2vh;
+    justify-content: space-between;
+    
+}
+
+.login {
+    margin: auto 0;
+    color: white;
+
+    &:hover {
+        color: red;
+    }
+}

@@ -1,0 +1,26 @@
+@import 'src/scss/variables';
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: calc(100% - $navbar-height);
+    display: flex;
+    background-color: #9e1c0e;
+    white-space: nowrap;
+    max-width: none;
+}
+
+.categories {
+    overflow-y: auto;
+    min-width: 200px;
+    max-width: 200px;
+    width: 30%;
+}
+
+.items {
+    flex-grow: 1;
+    
+    // background-color: blue;
+    background-color: white;
+
+}

@@ -1,0 +1,125 @@
+@import 'src/scss/card';
+@import 'src/scss/variables';
+
+
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #9e1c0e;
+    max-width: none;
+    height: calc(100% - $navbar-height);
+    display: flex;
+    min-width: 300px;
+
+    .items {
+        height: 100%;
+        width: calc(100% - 240px);
+        display: flex;
+         margin: 0 50px;
+         flex-wrap: wrap;
+         box-sizing: content-box;
+        justify-content: center;
+    }
+
+    .panel {
+        height: 100%;
+        width: 240px;
+        background-color: white;
+        overflow: hidden;
+
+
+        .content {
+        position: relative;
+        white-space: nowrap;
+        margin: 10px;
+        height: calc(100% - 20px);
+        box-sizing: border-box;
+
+        :checked ~ .item {
+            color: white;
+            background-color: #9e1c0e;
+        }
+        :checked ~ .item::after {
+            border-left: 1px solid white;
+        }
+
+        .item {
+            cursor: pointer;
+            border-radius: 4px;
+            width: 80%;
+            background-color: white;
+            color: #9e1c0e;
+            text-align: center;
+            position: relative;
+            height: 22px;
+            margin-bottom: 8px;
+        }
+
+        .item::after {
+            position: absolute;
+            left: -1px;
+            bottom: 0;
+            height: 20px;
+            width: 1px;
+            border-left: 1px solid #9e1c0e;
+            content: "";
+
+        }
+
+        
+
+        .category {
+            width: 100%;
+        }
+
+        
+
+        .bottom {
+            align-items: center;
+            color: white;
+            border-radius: 4px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color:#9e1c0e;
+            margin-top: auto;
+            display: flex;
+            justify-content:space-between;
+        
+            .price {
+                padding-left: 5px;
+            }
+        
+            .buy {
+                background-color: white;
+                border: 1px solid #9e1c0e;
+                border-radius: 5px;
+            }
+        }
+
+        }
+        
+
+        
+    }
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+
+
+
+
+

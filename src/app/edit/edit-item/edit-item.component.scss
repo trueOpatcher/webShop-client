@@ -1,0 +1,47 @@
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    
+    border-radius: 10px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+}
+
+img {
+    margin-top: 7px;
+    width: 200px;
+    height: 200px;
+}
+
+input[type=file] {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+}
+
+.input-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.bottom {
+    margin-bottom: 5px;
+    
+}
+
+.dollar {
+    font-size: 22px;
+    margin: auto;
+    margin-right: 5px;
+}
