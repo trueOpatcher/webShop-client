@@ -17,7 +17,7 @@
                         <div class="category menu-item" (click)="onSelectCategory(category.name, category.items)">
 
                             {{category.name}}
-                            <mat-icon class="cat-arrow" *ngIf="category.subCategories">chevron_right</mat-icon>
+                            <mat-icon class="cat-arrow" *ngIf="category.subCategories != []">chevron_right</mat-icon>
                         </div>
 
                         <div class="sub_menu" >

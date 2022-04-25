@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Item } from 'src/app/shared/models/item.model';
 import { CategoriesService } from 'src/app/shared/services/categories.service';
@@ -15,7 +16,8 @@ import { ItemService } from 'src/app/shared/services/item.service';
 export class EditItemComponent implements OnInit, OnDestroy {
 
   constructor(private itemService: ItemService,
-              private catService: CategoriesService) { }
+              private catService: CategoriesService,
+              private router: Router) { }
 
   sub!: Subscription;
   currentCategory!: any;
@@ -73,7 +75,9 @@ export class EditItemComponent implements OnInit, OnDestroy {
 
     this.itemService.createItem(file, name, price, desc, catName, subName).subscribe(() => {
       
-      this.catService.update().subscribe();
+      this.catService.update().subscribe(() => {
+        this.router.navigate(['/edit/items']);
+      });
     })
   }
 
