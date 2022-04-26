@@ -7,7 +7,7 @@
 
             
             <div class="item category">
-                 <div class="delete-box"><mat-icon class="matDelete" [matMenuTriggerFor]="menu">delete</mat-icon> </div>
+                 <!-- <div class="delete-box"><mat-icon class="matDelete" [matMenuTriggerFor]="menu">delete</mat-icon> </div> -->
                  <div (click)="onSelectCategory(category.name, category.items)">{{category.name}}</div>
             </div>
             <mat-menu #menu="matMenu">
