@@ -19,8 +19,15 @@ export class ShopComponent implements OnInit, OnDestroy {
   category: any;
 
   ngOnInit(): void {
+
+    
+
     this.sub = this.catService.currentCategory.subscribe(category => {
       this.category = category;
+
+      if(!this.category) {
+      this.catService.fetchAll().subscribe();
+    }
       
     })
   }

@@ -33,6 +33,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     });
   }
 
+  onClickAll() {
+    this.catService.fetchAll().subscribe(category => {
+      this.catService.currentCategory.next(category);
+    })
+  }
+
   onSelectCategory(catName: any, items?: Item[]) {
     this.catService.currentCategory.next({catName: catName, items: items});
     this.router.navigate(['/shop']);

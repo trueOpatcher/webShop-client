@@ -20,7 +20,6 @@ const routes: Routes = [
   },
   {
     path: 'busket',
-    canActivate: [AuthGuard],
     component: BusketComponent
   },
 

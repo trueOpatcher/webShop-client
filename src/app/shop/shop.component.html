@@ -3,6 +3,8 @@
 <div class="container">
 
     <div class="cat-name" *ngIf="category">{{category.subName ? category.subName: category.catName}}</div>
+    <div class="cat-name" *ngIf="!category">All</div>
+
 
     <div class="empty-cat" *ngIf="!category">
         Select Category

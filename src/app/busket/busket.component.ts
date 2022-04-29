@@ -18,22 +18,23 @@ export class BusketComponent implements OnInit {
   priceForAll!: number;
 
   ngOnInit(): void {
-    this.items = [{name: 'sge', imageUrl: 'sdge', price: 'saseg', desc: 'asge'}, {name: 'sge', imageUrl: 'sdge', price: 'saseg', desc: 'asge'}];
 
     this.busketService.busket.subscribe(items => {
       this.items = items;
 
       let prices = 0;
 
-      for(let item of items) {
+      for (let item of items) {
         prices += +item.price;
       }
-      
+
       this.priceForAll = prices;
+
+      this.onShowAll();
     })
   }
 
-  onShowItem(index:number) {
+  onShowItem(index: number) {
     this.currentItems = [this.items[index]];
 
   }
@@ -43,11 +44,13 @@ export class BusketComponent implements OnInit {
   }
 
   onRemoveItem(index: number) {
-    
+
     let newItems = this.items;
     newItems.splice(index, 1);
 
     this.busketService.busket.next(newItems);
   }
+
+
 
 }

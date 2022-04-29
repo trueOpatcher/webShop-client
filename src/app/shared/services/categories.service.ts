@@ -28,6 +28,14 @@ export class CategoriesService {
         
     }
 
+    fetchAll() {
+        return this.http.get<any>(this.serverUrl + '/categories/fetch/all').pipe(
+            take(1),
+            map(category => {
+                this.currentCategory.next(category);
+            }));
+    }
+
     addCategory(categoryName: string) {
         return this.http.post<any>(this.serverUrl + '/categories/add/category', {name: categoryName}).pipe(take(1));
     }
